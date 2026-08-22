@@ -1,0 +1,1243 @@
+
+.dashboard {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+
+  color: #fff;
+
+  background:
+    linear-gradient(
+      rgba(3, 7, 3, 0.88),
+      rgba(3, 7, 3, 0.94)
+    ),
+    url("https://static.vecteezy.com/system/resources/thumbnails/054/790/404/small/lush-green-forest-with-vibrant-foliage-creating-serene-atmosphere-photo.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  font-family: "Inter", sans-serif;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  width: 245px;
+  min-height: 100vh;
+
+  padding: 28px 18px;
+
+  display: flex;
+  flex-direction: column;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+
+  background: rgba(4, 8, 4, 0.72);
+
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  z-index: 10;
+}
+
+
+/* LOGO */
+
+.dashboard-logo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 5px 12px;
+
+  margin-bottom: 45px;
+
+  font-size: 18px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.dashboard-logo-mark {
+  color: #b7ec28;
+
+  font-size: 24px;
+}
+
+.dashboard-logo span span {
+  color: #b7ec28;
+}
+
+
+/* NAV */
+
+.sidebar-nav {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.nav-item {
+  width: 100%;
+
+  height: 48px;
+
+  border: 1px solid transparent;
+
+  border-radius: 13px;
+
+  background: transparent;
+
+  color: #777;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 0 15px;
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  text-align: left;
+}
+
+.nav-item span {
+  width: 20px;
+
+  font-size: 16px;
+
+  text-align: center;
+}
+
+.nav-item:hover {
+  color: #fff;
+
+  background: rgba(183, 236, 40, 0.06);
+}
+
+.nav-item.active {
+  color: #b7ec28;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(183, 236, 40, 0.12),
+      rgba(183, 236, 40, 0.025)
+    );
+
+  border-color: rgba(183, 236, 40, 0.12);
+
+  box-shadow:
+    inset 3px 0 0 #b7ec28;
+}
+
+
+/* SIDEBAR BOTTOM */
+
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+.vip-mini-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px;
+
+  border-radius: 16px;
+
+  background: rgba(183, 236, 40, 0.06);
+
+  border: 1px solid rgba(183, 236, 40, 0.12);
+
+  margin-bottom: 12px;
+}
+
+.vip-icon {
+  width: 35px;
+  height: 35px;
+
+  border-radius: 11px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #0a0d06;
+
+  background: #b7ec28;
+
+  font-size: 16px;
+}
+
+.vip-mini-card strong {
+  display: block;
+
+  color: #b7ec28;
+
+  font-size: 9px;
+
+  letter-spacing: 1px;
+}
+
+.vip-mini-card p {
+  color: #777;
+
+  font-size: 8px;
+
+  margin-top: 4px;
+}
+
+.logout-btn {
+  width: 100%;
+
+  height: 43px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #666;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 15px;
+
+  font-size: 11px;
+
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  color: #ff6666;
+
+  background: rgba(255, 80, 80, 0.06);
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.dashboard-main {
+  width: calc(100% - 245px);
+
+  margin-left: 245px;
+
+  min-height: 100vh;
+}
+
+
+/* =========================
+   TOPBAR
+========================= */
+
+.topbar {
+  height: 80px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 38px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+  background: rgba(3, 7, 3, 0.45);
+
+  backdrop-filter: blur(20px);
+}
+
+.search-box {
+  width: 280px;
+
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 15px;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.search-box span {
+  color: #777;
+
+  font-size: 19px;
+}
+
+.search-box input {
+  width: 100%;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #fff;
+
+  font-size: 10px;
+}
+
+.search-box input::placeholder {
+  color: #666;
+}
+
+.top-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+}
+
+.notification {
+  width: 38px;
+  height: 38px;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 11px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  color: #999;
+
+  cursor: pointer;
+
+  position: relative;
+}
+
+.notification span {
+  position: absolute;
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #b7ec28;
+
+  top: 8px;
+  right: 8px;
+}
+
+.user-profile {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+
+  border-radius: 12px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b7ec28,
+      #6f9219
+    );
+
+  color: #101507;
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+.user-info strong {
+  display: block;
+
+  font-size: 10px;
+}
+
+.user-info small {
+  color: #6d6d6d;
+
+  font-size: 8px;
+}
+
+.arrow {
+  color: #666;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.dashboard-content {
+  padding: 40px;
+}
+
+
+/* WELCOME */
+
+.welcome-section {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+.welcome-small {
+  color: #b7ec28;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 10px;
+}
+
+.welcome-section h1 {
+  font-size: 30px;
+
+  font-weight: 500;
+
+  letter-spacing: -1px;
+}
+
+.welcome-section h1 span {
+  color: #b7ec28;
+}
+
+.welcome-description {
+  color: #777;
+
+  font-size: 10px;
+
+  margin-top: 9px;
+}
+
+.premium-button {
+  height: 43px;
+
+  padding: 0 20px;
+
+  border: 1px solid rgba(183, 236, 40, 0.25);
+
+  border-radius: 12px;
+
+  background: rgba(183, 236, 40, 0.08);
+
+  color: #b7ec28;
+
+  font-size: 10px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.premium-button span {
+  margin-left: 10px;
+}
+
+.premium-button:hover {
+  background: rgba(183, 236, 40, 0.16);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   VIP HERO
+========================= */
+
+.vip-hero {
+  min-height: 205px;
+
+  border-radius: 25px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 35px;
+
+  margin-bottom: 20px;
+
+  border: 1px solid rgba(183, 236, 40, 0.20);
+
+  background:
+    linear-gradient(
+      110deg,
+      rgba(15, 25, 7, 0.92),
+      rgba(8, 12, 7, 0.62)
+    ),
+    url("https://static.vecteezy.com/system/resources/thumbnails/054/790/404/small/lush-green-forest-with-vibrant-foliage-creating-serene-atmosphere-photo.jpeg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.35),
+    inset 0 0 50px rgba(183, 236, 40, 0.04);
+}
+
+.vip-glow {
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  border-radius: 50%;
+
+  background: rgba(183, 236, 40, 0.12);
+
+  filter: blur(80px);
+
+  top: -200px;
+
+  left: 30%;
+}
+
+.vip-content {
+  position: relative;
+
+  z-index: 2;
+}
+
+.vip-label {
+  color: #b7ec28;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.vip-content h2 {
+  font-size: 28px;
+
+  font-weight: 500;
+
+  margin-top: 15px;
+}
+
+.vip-content p {
+  color: #888;
+
+  font-size: 10px;
+
+  margin-top: 8px;
+}
+
+.vip-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 22px;
+
+  padding: 7px 12px;
+
+  border-radius: 20px;
+
+  background: rgba(183, 236, 40, 0.08);
+
+  border: 1px solid rgba(183, 236, 40, 0.14);
+
+  color: #aaa;
+
+  font-size: 8px;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #b7ec28;
+
+  box-shadow: 0 0 10px #b7ec28;
+}
+
+.vip-badge {
+  position: absolute;
+
+  right: 60px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 125px;
+  height: 125px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(183, 236, 40, 0.35);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(183, 236, 40, 0.15),
+      rgba(0, 0, 0, 0.4)
+    );
+
+  box-shadow:
+    0 0 45px rgba(183, 236, 40, 0.12),
+    inset 0 0 25px rgba(183, 236, 40, 0.08);
+}
+
+.badge-star {
+  color: #b7ec28;
+
+  font-size: 18px;
+}
+
+.vip-badge strong {
+  color: #fff;
+
+  font-size: 22px;
+
+  letter-spacing: 3px;
+}
+
+.vip-badge small {
+  color: #777;
+
+  font-size: 7px;
+
+  letter-spacing: 3px;
+
+  margin-top: 3px;
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 15px;
+
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  min-height: 115px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 20px;
+
+  border-radius: 18px;
+
+  background: rgba(9, 14, 8, 0.62);
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  backdrop-filter: blur(15px);
+
+  transition: 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(183, 236, 40, 0.18);
+}
+
+.stat-icon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  border-radius: 13px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 17px;
+}
+
+.stat-icon.green {
+  color: #b7ec28;
+  background: rgba(183, 236, 40, 0.08);
+}
+
+.stat-icon.purple {
+  color: #bd9cff;
+  background: rgba(189, 156, 255, 0.08);
+}
+
+.stat-icon.blue {
+  color: #73baff;
+  background: rgba(115, 186, 255, 0.08);
+}
+
+.stat-icon.orange {
+  color: #ffb66d;
+  background: rgba(255, 182, 109, 0.08);
+}
+
+.stat-card p {
+  color: #777;
+
+  font-size: 9px;
+
+  margin-bottom: 7px;
+}
+
+.stat-card h3 {
+  font-size: 18px;
+
+  font-weight: 600;
+
+  margin-bottom: 5px;
+}
+
+.positive {
+  color: #9fcf2d;
+
+  font-size: 8px;
+}
+
+.neutral {
+  color: #666;
+
+  font-size: 8px;
+}
+
+
+/* =========================
+   LOWER GRID
+========================= */
+
+.lower-grid {
+  display: grid;
+
+  grid-template-columns: 1.5fr 1fr;
+
+  gap: 20px;
+}
+
+
+/* ACTIVITY */
+
+.activity-card,
+.profile-card {
+  border-radius: 20px;
+
+  background: rgba(8, 13, 7, 0.65);
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  backdrop-filter: blur(18px);
+}
+
+.activity-card {
+  padding: 25px;
+}
+
+.card-heading {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.card-heading h3 {
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.card-heading p {
+  color: #666;
+
+  font-size: 8px;
+
+  margin-top: 5px;
+}
+
+.card-heading button {
+  border: none;
+
+  background: transparent;
+
+  color: #b7ec28;
+
+  font-size: 8px;
+
+  cursor: pointer;
+}
+
+.activity-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.activity-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 12px;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.activity-icon {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.activity-icon.green {
+  color: #b7ec28;
+  background: rgba(183, 236, 40, 0.08);
+}
+
+.activity-icon.blue {
+  color: #73baff;
+  background: rgba(115, 186, 255, 0.08);
+}
+
+.activity-icon.purple {
+  color: #bd9cff;
+  background: rgba(189, 156, 255, 0.08);
+}
+
+.activity-item strong {
+  display: block;
+
+  font-size: 9px;
+
+  font-weight: 500;
+}
+
+.activity-item p {
+  color: #666;
+
+  font-size: 7px;
+
+  margin-top: 4px;
+}
+
+.activity-status {
+  margin-left: auto;
+
+  color: #8cad2c;
+
+  font-size: 7px;
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile-card {
+  padding-bottom: 20px;
+
+  overflow: hidden;
+}
+
+.profile-cover {
+  height: 75px;
+
+  background:
+    linear-gradient(
+      rgba(183, 236, 40, 0.08),
+      rgba(3, 7, 3, 0.7)
+    ),
+    url("https://static.vecteezy.com/system/resources/thumbnails/054/790/404/small/lush-green-forest-with-vibrant-foliage-creating-serene-atmosphere-photo.jpeg");
+
+  background-size: cover;
+
+  background-position: center;
+}
+
+.profile-avatar {
+  width: 65px;
+  height: 65px;
+
+  margin: -32px auto 0;
+
+  position: relative;
+
+  border-radius: 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #b7ec28;
+
+  color: #0b0e06;
+
+  font-size: 20px;
+
+  font-weight: 800;
+
+  border: 5px solid #081007;
+}
+
+.profile-details {
+  text-align: center;
+
+  padding: 12px 20px;
+}
+
+.profile-details h3 {
+  font-size: 14px;
+}
+
+.profile-details p {
+  color: #666;
+
+  font-size: 8px;
+
+  margin-top: 5px;
+}
+
+.profile-badge {
+  display: inline-block;
+
+  margin-top: 10px;
+
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  color: #b7ec28;
+
+  background: rgba(183, 236, 40, 0.07);
+
+  border: 1px solid rgba(183, 236, 40, 0.12);
+
+  font-size: 7px;
+}
+
+.profile-info {
+  margin: 10px 20px;
+
+  padding: 14px;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.profile-info div {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 8px;
+}
+
+.profile-info div:last-child {
+  margin-bottom: 0;
+}
+
+.profile-info span {
+  color: #666;
+
+  font-size: 7px;
+}
+
+.profile-info strong {
+  color: #aaa;
+
+  font-size: 7px;
+}
+
+.profile-info .active-text {
+  color: #9fcf2d;
+}
+
+.profile-button {
+  width: calc(100% - 40px);
+
+  margin: 5px 20px 0;
+
+  height: 37px;
+
+  border-radius: 10px;
+
+  border: 1px solid rgba(183, 236, 40, 0.18);
+
+  background: rgba(183, 236, 40, 0.07);
+
+  color: #b7ec28;
+
+  font-size: 8px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.profile-button:hover {
+  background: rgba(183, 236, 40, 0.14);
+}
+
+
+/* =========================
+   MOBILE LOGO
+========================= */
+
+.mobile-logo {
+  display: none;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lower-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 800px) {
+
+  .sidebar {
+    width: 75px;
+
+    padding: 25px 12px;
+  }
+
+  .dashboard-logo {
+    justify-content: center;
+
+    padding: 0;
+  }
+
+  .dashboard-logo > span {
+    display: none;
+  }
+
+  .nav-item {
+    justify-content: center;
+
+    padding: 0;
+  }
+
+  .nav-item span {
+    font-size: 18px;
+  }
+
+  .nav-item {
+    font-size: 0;
+  }
+
+  .vip-mini-card {
+    justify-content: center;
+  }
+
+  .vip-mini-card div:last-child {
+    display: none;
+  }
+
+  .logout-btn {
+    justify-content: center;
+
+    padding: 0;
+  }
+
+  .logout-btn {
+    font-size: 0;
+  }
+
+  .dashboard-main {
+    width: calc(100% - 75px);
+
+    margin-left: 75px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .dashboard-content {
+    padding: 22px 15px;
+  }
+
+  .topbar {
+    padding: 0 15px;
+  }
+
+  .search-box {
+    display: none;
+  }
+
+  .user-info,
+  .arrow {
+    display: none;
+  }
+
+  .mobile-logo {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: 800;
+  }
+
+  .mobile-logo span {
+    color: #b7ec28;
+  }
+
+  .welcome-section {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  .welcome-section h1 {
+    font-size: 24px;
+  }
+
+  .premium-button {
+    width: 100%;
+  }
+
+  .vip-hero {
+    padding: 25px;
+
+    min-height: 230px;
+  }
+
+  .vip-badge {
+    width: 85px;
+    height: 85px;
+
+    right: 20px;
+  }
+
+  .vip-badge strong {
+    font-size: 16px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lower-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
